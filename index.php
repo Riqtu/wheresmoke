@@ -35,15 +35,17 @@
     </div>
     <div class="content">
     <?php foreach ($articles as $a): ?> 
-            <div class="article" >
-                <h3><a href="article.php?id=<?=$a['id']?>">
-                        <?=$a['name']?>
-                    </a></h3>
-                <em >Опубликовано:<?=$a['asses']?></em>
-                <p><?=$a['content']?>...</p>
-                
-                <p><?php  ?>...</p>
-            </div>
+    <div class="article" onclick="openArticle(<?= $a['id']-1 ?>)">
+        <div class="article__header"><h1 ></h1><?=$a['header']?></div>
+        <div class="article__mark"><?php echo "<img src='".$a['mark']."' >"?></div>
+        <div class="article__plusminus"><?=$a['plusminus']?></div>
+        <div class="article__img"><?php echo "<img src='".$a['image']."' >"?></div>
+        <div class="article__about"><?=$a['about']?></div>
+        <div class="article__map"><?=$a['map']?></div>
+        <div class="article__buy">
+            ЗАБРОНИРОВАТЬ
+        </div>
+    </div>
         <?php endforeach ?> 
     </div>
     <script src="js/main.js"></script>

@@ -1,5 +1,6 @@
 <?php
 
+    $k = -1;
     function articles_all($link){
         $query = "SELECT * FROM articles ORDER BY id DESC";
         $result = mysqli_query($link, $query);

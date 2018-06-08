@@ -13,3 +13,4 @@
 		printf("Error: ".mysqli_error($link));
 	}
 ?>
+<!-- apachectl stop -->
