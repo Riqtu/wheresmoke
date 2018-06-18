@@ -1,11 +1,11 @@
 class Menu {
     constructor(className) {
-        this.el = document.getElementsByClassName(className)[i];
+        this.el = document.getElementsByClassName(className)[0];
         this.open = false;
-        this.nav = document.getElementsByClassName("novigation")[i];
-        this.l = document.getElementsByClassName("mleft")[i];
-        this.c = document.getElementsByClassName("mcenter")[i];
-        this.r = document.getElementsByClassName("mright")[i];
+        this.nav = document.getElementsByClassName("novigation")[0];
+        this.l = document.getElementsByClassName("mleft")[0];
+        this.c = document.getElementsByClassName("mcenter")[0];
+        this.r = document.getElementsByClassName("mright")[0];
         this.el.addEventListener("click", () => {
             this.setMenu()});
     }
@@ -36,9 +36,14 @@ class Menu {
 
 var menu = new Menu("menu__img");
 
+function howold(){
+    var y = document.getElementsByClassName("howold");
+    y.style.opacity = "0"; 
+}
+
 function openArticle(i) {
     var x = document.getElementsByClassName("article");
-    i= x.length - i - 1;
+    // i= x.length - i - 1;
     var y = document.getElementsByClassName("article__img");
     var z = document.getElementsByClassName("article__about");
     var a = document.getElementsByClassName("article__buy");
@@ -75,84 +80,28 @@ function openArticle(i) {
     }, 1200);
 }
 
-function closeArticle() {
+function closeArticle(k) {
     var x = document.getElementsByClassName("article");
-    i= x.length - i - 1;
-    x[i].style.width = '700px';
-    x[i].style.left = '20px';
-    x[i].style.height = '270px';
+    // k= x.length - k - 1;
+    x[k].style.width = '700px';
+    x[k].style.left = '20px';
+    x[k].style.height = '270px';
     
     var y = document.getElementsByClassName("article__img");
-    y[i].style.right = "0px";
-    y[i].style.top = "0px";
+    y[k].style.right = "0px";
+    y[k].style.top = "0px";
 
     var z = document.getElementsByClassName("article__about");
     var a = document.getElementsByClassName("article__buy");
     var m = document.getElementsByClassName("article__map");
 
-    z[i].style.opacity = "0"; 
-    a[i].style.opacity = "0"; 
-    m[i].style.opacity = "0"; 
+    z[k].style.opacity = "0"; 
+    a[k].style.opacity = "0"; 
+    m[k].style.opacity = "0"; 
 
     setTimeout(() => {
-        a[i].style.transition = "1s";
-        z[i].style.transition = "1s";
-        m[i].style.transition = "1s";
+        a[k].style.transition = "1s";
+        z[k].style.transition = "1s";
+        m[k].style.transition = "1s";
         }, 1200);
-}
-
-
-function openArticle1() {
-    var x = document.getElementsByClassName("article");
-    x[1].style.width = '100vw';
-    x[1].style.left = '0';
-    x[1].style.height = 'calc(100vh - 145px)';
-    
-    var y = document.getElementsByClassName("article__img");
-    y[1].style.right = "10px";
-    y[1].style.top = "10px";
-
-    var z = document.getElementsByClassName("article__about");
-    var a = document.getElementsByClassName("article__buy");
-    
-
-    z[1].style.display = "block";
-   
-    a[1].style.display = "grid";
-    setTimeout(() => {
-       z[1].style.opacity = "1"; 
-       a[1].style.opacity = "1";
-    }, 100);
-
-    var m = document.getElementsByClassName("article__map");
-    setTimeout(() => {
-        m[1].style.display = "block"; 
-    }, 400);
-    setTimeout(() => {
-        m[1].style.opacity = "1";  
-    }, 500);
-}
-function closeArticle1() {
-    var x = document.getElementsByClassName("article");
-    x[1].style.width = '700px';
-    x[1].style.left = '20px';
-    x[1].style.height = '270px';
-
-    var y = document.getElementsByClassName("article__img");
-    y[1].style.right = "0px";
-    y[1].style.top = "0px";
-
-    var z = document.getElementsByClassName("article__about");
-    var a = document.getElementsByClassName("article__buy");
-    var m = document.getElementsByClassName("article__map");
-
-    z[1].style.opacity = "0"; 
-    a[1].style.opacity = "0"; 
-    m[1].style.opacity = "0"; 
-}
-function openArticle2() {
-    var x = document.getElementsByClassName("article"); 
-    x[2].style.width = '100vw';
-    x[2].style.left = '0';
-    x[2].style.height = 'calc(100vh - 145px)';
 }

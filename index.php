@@ -3,6 +3,7 @@
     require_once 'models/articles.php' ;
     $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
     $articles = articles_all(@$link);
+    $counter = -1;
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +18,15 @@
     <script src="js/jquery-latest.js"></script>
 </head>
 <body>
+    <!-- <div class="howold">
+        <h1>18+</h1>
+        <h2>Тебе много годиков?</h2>
+        <div class="howold__logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="howold__yes" onclick="howold()">ДА</div>
+        <div class="howold__no">НЕТ</div>
+    </div> -->
     <div class="bg"></div>
     <div class="menu">
             <img class="menu__img" src="img/menu-butto-on.svg">
@@ -31,18 +41,18 @@
         <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
     </div>
     <div class="logo">
-        <img src="img/logo.png" alt="">
+        <img src="img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)">
     </div>
     <div class="content">
-    <?php foreach ($articles as $a): ?> 
-    <div class="article" onclick="openArticle(<?= $a['id']-1 ?>)">
-        <div class="article__header"><h1 ></h1><?=$a['header']?></div>
+    <?php foreach ($articles as $a): $counter +=1;?>
+    <div class="article">
+        <div class="article__header" onclick="openArticle(<?= $counter ?>)"><?=$a['header']?></div>
         <div class="article__mark"><?php echo "<img src='".$a['mark']."' >"?></div>
-        <div class="article__plusminus"><?=$a['plusminus']?></div>
-        <div class="article__img"><?php echo "<img src='".$a['image']."' >"?></div>
+        <div class="article__plusminus" onclick="openArticle(<?= $counter ?>)"><?=$a['plusminus']?></div>
+        <div class="article__img" onclick="openArticle(<?= $counter ?>)"><?php echo "<img src='".$a['image']."'>"?></div>
         <div class="article__about"><?=$a['about']?></div>
         <div class="article__map"><?=$a['map']?></div>
-        <div class="article__buy">
+        <div class="article__buy" onclick="closeArticle(<?= $counter ?>)">
             ЗАБРОНИРОВАТЬ
         </div>
     </div>
