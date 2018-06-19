@@ -35,10 +35,10 @@
     <div class="mcenter"></div>
     <div class="mright"></div>
     <div class="novigation">
-        <!-- <h1 onclick="goToHome(); menu.setMenu();">ГЛАВНАЯ</h1>
-        <h1 onclick="aboutOn(); menu.setMenu();">О ПРОЕКТЕ</h1>
+        <a href="admin/index.php"><h1 onclick="goToHome(); menu.setMenu();">ГЛАВНАЯ</h1></a>
+        <!-- <h1 onclick="aboutOn(); menu.setMenu();">О ПРОЕКТЕ</h1>
         <h1 onclick="projectsOn(); menu.setMenu();">РАБОТЫ</h1>
-        <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
+        <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1>  -->
     </div>
     <div class="logo">
         <img src="img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)">
@@ -48,6 +48,7 @@
     <div class="article">
         <div class="article__header" onclick="openArticle(<?= $counter ?>)"><?=$a['header']?></div>
         <div class="article__mark"><?php echo "<img src='".$a['mark']."' >"?></div>
+        <br><br><br>
         <div class="article__plusminus" onclick="openArticle(<?= $counter ?>)"><?=$a['plusminus']?></div>
         <div class="article__img" onclick="openArticle(<?= $counter ?>)"><?php echo "<img src='".$a['image']."'>"?></div>
         <div class="article__about"><?=$a['about']?></div>

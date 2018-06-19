@@ -4,30 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-    <h1>Тест</h1>
     <div>
-        <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
+    <div class="bg"></div>
+    <div class="logo">
+    <a href="../index.php"><img src="../img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)"></a>
+    </div>
+    <div>
+    <div class="admin-content">
+        <form method="post" class="add-form" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
+        <table>
+            <tr>
             <label>
-                Название
-                <input type="text" name="header" value="<?=$article['header']?>" autofocus required>
+                <td>Название</td>
+                <td><input type="text" name="header" value="<?=$article['header']?>" autofocus required></td>
             </label>
+            </tr>
+            <tr>
             <label>
-                ДАТА
-                <input type="text" name="mark" value="<?=$article['mark']?>" required>
+                <td>Оценка</td>
+                <td><input type="text" name="mark" value="<?=$article['mark']?>" required></td>
             </label>
+            </tr>
+            <tr>
+                <label>
+                    <td>Плюсы и Минусы</td>
+                    <td><textarea name="plusminus" class="big-form" required><?=$article['plusminus']?></textarea></td>
+                </label>
+            </tr>
+            <tr>
             <label>
-                Содержимое
-                <textarea name="plusminus" required><?=$article['plusminus']?></textarea>
-                <textarea name="image" required><?=$article['image']?></textarea>
-                <textarea name="about" required><?=$article['about']?></textarea>
-                <textarea name="map" required><?=$article['map']?></textarea>
-                <textarea name="brn" required><?=$article['brn']?></textarea>
+                <td>Изображение</td>
+                <td><textarea name="image" required><?=$article['image']?></textarea></td>
+                
             </label>
+            </tr>
+            <tr>
+            <label>
+                <td>Описание</td>
+                <td><textarea name="about" class="big-form" required><?=$article['about']?></textarea></td>
+            </label>
+            </tr>
+            <tr>
+            <label>
+                <td>Карта</td>
+                <td><textarea name="map" required><?=$article['map']?></textarea></td>
+                 
+            </label>
+            </tr>
+            <tr>
+            <label>
+                <td>Бронь/*</td>
+                <td><textarea name="brn" required><?=$article['brn']?></textarea></td>
+            </label>
+            </tr>
+            </table>
             <input type="submit" value="Сохранить">
         </form>
     </div>
+</div>
 </body>
 </html>
