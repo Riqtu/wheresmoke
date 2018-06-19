@@ -12,21 +12,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Где кальян?</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&amp;subset=cyrillic" rel="stylesheet">
-    <script src="js/jquery-latest.js"></script>
+    <!-- <script src="js/jquery-latest.js"></script> -->
 </head>
 <body>
-    <!-- <div class="howold">
+    <div class="howold">
         <h1>18+</h1>
         <h2>Тебе много годиков?</h2>
         <div class="howold__logo">
             <img src="img/logo.png" alt="">
         </div>
-        <div class="howold__yes" onclick="howold()">ДА</div>
+        <div class="howold__yes" onclick="start()">ДА</div>
         <div class="howold__no">НЕТ</div>
-    </div> -->
+    </div>
     <div class="bg"></div>
     <div class="menu">
             <img class="menu__img" src="img/menu-butto-on.svg">
@@ -58,6 +58,12 @@
         </div>
     </div>
         <?php endforeach ?> 
+    </div>
+    <div class="recomendation">
+        <div class="recomendation__header">Кальянная дня:</div>
+    <div class="article-recom">
+        <div class="article-recom__header">Юхуу</div>
+    </div>
     </div>
     <script src="js/main.js"></script>
 </body>

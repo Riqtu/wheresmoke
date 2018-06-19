@@ -36,10 +36,6 @@ class Menu {
 
 var menu = new Menu("menu__img");
 
-function howold(){
-    var y = document.getElementsByClassName("howold");
-    y.style.opacity = "0"; 
-}
 
 function openArticle(i) {
     var x = document.getElementsByClassName("article");
@@ -104,4 +100,18 @@ function closeArticle(k) {
         z[k].style.transition = "1s";
         m[k].style.transition = "1s";
         }, 1200);
+
+    setTimeout(() => {
+        a[k].style.display = "none";
+        z[k].style.display = "none";
+        m[k].style.display = "none";
+    }, 1200);
+}
+
+function start(){
+    var old = document.getElementsByClassName("howold");
+    old[0].style.opacity = "0";
+    setTimeout(() => {
+        old[0].style.display = "none";
+    }, 1000);
 }
