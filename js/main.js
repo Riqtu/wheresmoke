@@ -115,3 +115,24 @@ function start(){
         old[0].style.display = "none";
     }, 1000);
 }
+function noold(){
+    var nold = document.getElementsByClassName("howold__noold");
+    var st = document.getElementsByClassName("howold__st");
+    st[0].style.opacity = "0";
+    setTimeout(() => {
+        st[0].style.display = "none";
+        nold[0].style.display = "block";
+    }, 500);
+    nold[0].style.opacity = "1";
+}
+function recomendationOn(){
+    var z = document.getElementsByClassName("recomendation-all");
+    var header = document.getElementsByClassName("article-recom_header");
+    z[0].style.display = "block";
+    setTimeout(() => {
+        z[0].style.opacity = "1"; 
+    }, 1);
+    setTimeout(() => {
+        header[0].style.zIndex = "300"; 
+    }, 600);
+}

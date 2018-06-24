@@ -19,13 +19,15 @@
 </head>
 <body>
     <div class="howold">
-        <h1>18+</h1>
-        <h2>Тебе много годиков?</h2>
+        <h1 class="howold__st">18+</h1>
+        <h1 class="howold__noold">:c</h1>
+        <h2 class="howold__st">Тебе много годиков?</h2>
+        <h2 class="howold__noold">Сюда тебе нельзя</h2>
         <div class="howold__logo">
-            <img src="img/logo.png" alt="">
+             <img src="img/logo.png" alt="">
         </div>
         <div class="howold__yes" onclick="start()">ДА</div>
-        <div class="howold__no">НЕТ</div>
+        <div class="howold__no" onclick="noold()">НЕТ</div>
     </div>
     <div class="bg"></div>
     <div class="menu">
@@ -35,10 +37,10 @@
     <div class="mcenter"></div>
     <div class="mright"></div>
     <div class="novigation">
-        <a href="admin/index.php"><h1 onclick="goToHome(); menu.setMenu();">ГЛАВНАЯ</h1></a>
-        <!-- <h1 onclick="aboutOn(); menu.setMenu();">О ПРОЕКТЕ</h1>
-        <h1 onclick="projectsOn(); menu.setMenu();">РАБОТЫ</h1>
-        <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1>  -->
+        <h1 onclick="goToHome(); menu.setMenu();">ГЛАВНАЯ</h1></a>
+        <h1 onclick="aboutOn(); menu.setMenu();">О ПРОЕКТЕ</h1>
+        <!-- <h1 onclick="projectsOn(); menu.setMenu();">РАБОТЫ</h1>
+        <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
     </div>
     <div class="logo">
         <img src="img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)">
@@ -59,11 +61,19 @@
     </div>
         <?php endforeach ?> 
     </div>
+    <div class="recomendation-all"></div>
     <div class="recomendation">
         <div class="recomendation__header">Кальянная дня:</div>
     <div class="article-recom">
-        <div class="article-recom__header">Юхуу</div>
+        <div class="article-recom__img" onclick="recomendationOn()"><img src="img/youhoo-rec.jpg" alt=""></div>
+        <div class="article-recom__header">YOUHOO</div>
     </div>
+    </div>
+
+    <div class="contacts">
+        <h3>Мы в социальных сетях:</h3>
+        <a href=""><img src="img/vk.svg" alt=""></a>
+        <a href="admin/index.php"><img src="img/instagram.svg" alt=""></a>
     </div>
     <script src="js/main.js"></script>
 </body>

@@ -5,7 +5,7 @@
     
 }
 body{
-
+    background: #0b0b0b;
 }
 .howold{
     position: fixed;
@@ -23,6 +23,7 @@ body{
 .howold h1{
     font-size: 180pt;
     margin-top: -120px;
+    transition: 0.3s;
 }
 .howold h2{
     font-size: 30pt;
@@ -58,6 +59,14 @@ body{
 .howold__no{
     background: rgb(163, 163, 163);
     left: calc(50% - 200px);
+}
+.howold__st{
+    display: block;
+    opacity: 1;
+}
+.howold__noold{
+    display: none;
+    opacity: 0;
 }
 
 .menu{
@@ -350,6 +359,7 @@ body{
     right: 30px;
     /* background: #0b0b0b; */
     /* padding-top: calc(50% - 135px); */
+    cursor: pointer;
 }
 .recom-adaptive{
     left: 0px;
@@ -373,6 +383,12 @@ body{
     background-color: #0b0b0b;
     box-shadow: 1px 1px 3px black;
 }
+.article-recom__img{
+    position: absolute;
+    width: 600px;
+    height: 270px;
+    z-index: 1;
+}
 .article-recom__header{
     position: absolute;
     margin-left: 10px;
@@ -381,9 +397,45 @@ body{
     font-size: 34pt;
     font-weight: 900;
     color: white;
+    z-index: 2;
 }
 .article-recom:hover{
     opacity: 1;
 }
+.recomendation-all{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0b0b0b;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 200;
+}
 
+
+.contacts{
+    position: fixed;
+    width: 350px;
+    height: 35px;
+    top: calc(100% - 35px);
+    left: calc(100% - 350px);
+}
+.contacts h3{
+    font-size: 15pt;
+    font-weight: 300;
+    color: white;
+    float: left;
+    opacity: 0.7;
+}
+.contacts img{
+    margin-top: -3px;
+    margin-left: 7px;
+    width: 30px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.contacts img:hover{
+    opacity: 1;
+}
 /* AIzaSyDH5Ip6Sn7sYq5jriRtXy04UqZvQap81WA */
