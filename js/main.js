@@ -132,6 +132,17 @@ function recomendationOn(){
     setTimeout(() => {
         z[0].style.opacity = "1"; 
     }, 1);
+    // setTimeout(() => {
+    //     header[0].style.zIndex = "300"; 
+    // }, 600);
+}
+function closeRecom(){
+    var z = document.getElementsByClassName("recomendation-all");
+    var header = document.getElementsByClassName("article-recom_header");
+    z[0].style.display = "block";
+    setTimeout(() => {
+        z[0].style.opacity = "1"; 
+    }, 1);
     setTimeout(() => {
         header[0].style.zIndex = "300"; 
     }, 600);

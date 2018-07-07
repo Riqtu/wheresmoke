@@ -1,9 +1,17 @@
-<?php
-    require_once 'database.php' ;
-    require_once 'models/articles.php' ;
-    $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
-    $articles = articles_all(@$link);
-    $counter = -1;
+<?php 
+require_once 'database.php' ; 
+require_once 'models/articles.php' ; 
+$link = mysqli_connect($db_host, $db_user, $db_password, $db_name); 
+
+
+if ($_POST['qwe']==1){ 
+$articles = articles_allH(@$link); 
+} 
+
+else { 
+$articles = articles_all(@$link); 
+} 
+$counter = -1; 
 ?>
 
 <!DOCTYPE html>
@@ -43,8 +51,13 @@
         <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
     </div>
     <div class="logo">
+    <!-- <form name="f1" method="post" action="search.php">
+<input type="search" name="search_q"/>
+<input type="submit" value="Поиск"/></br>
+</form> -->
         <img src="img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)">
     </div>
+
     <div class="content">
     <?php foreach ($articles as $a): $counter +=1;?>
     <div class="article">
@@ -61,15 +74,40 @@
     </div>
         <?php endforeach ?> 
     </div>
-    <div class="recomendation-all"></div>
     <div class="recomendation">
-        <div class="recomendation__header">Кальянная дня:</div>
+    <!-- <form name="2" method="post" action="<?=$_SERVER['PHP_SELF']?>"> 
+<input type=hidden name="qwe" value="2"> 
+<input type="submit" value="СЖМ" > 
+</form><form name="2" method="post" action="<?=$_SERVER['PHP_SELF']?>"> 
+<input type=hidden name="qwe" value="1"> 
+<input type="submit" value="ЗЖМ"><br /> 
+</form> -->
+        <div class="recomendation__header">Рекомендуем:</div>
     <div class="article-recom">
         <div class="article-recom__img" onclick="recomendationOn()"><img src="img/youhoo-rec.jpg" alt=""></div>
         <div class="article-recom__header">YOUHOO</div>
     </div>
     </div>
-
+    <div class="recomendation-all">
+        <div class="recomendation-all__header">YOUHOO</div>
+        <div class="recomendation-all__mark"><img src="img/5s.png" alt=""></div>
+        <div class="recomendation-all__about">
+            <h1>ОПИСАНИЕ</h1>
+            Пожалуй, одна из самых красивых и уютных кальянных города. Находится на берегу Дона. Кальянная специализируется на "фруктовых" чашах. Очень много игр. Вкуснейший час. Обязательно стоит посетить.
+            <br>
+            <h1>КОНТАКТЫ</h1>
+            Адрес: Береговая ул., 8 <br>
+            Телефон: 8 (951) 514-17-00 <br>
+            vk <br>
+            instagram <br>
+        </div>
+        <div class="recomendation-all__img">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A823b07d972bd4031b2287e98479f61a454a3ffdcfeb17c062c15302bc4133ef3&amp;width=400&amp;height=360&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="recomendation-all__buy" onclick="closeRecom()">
+            ЗАБРОНИРОВАТЬ
+        </div>
+    </div>
     <div class="contacts">
         <h3>Мы в социальных сетях:</h3>
         <a href=""><img src="img/vk.svg" alt=""></a>

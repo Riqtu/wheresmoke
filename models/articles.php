@@ -15,7 +15,22 @@
             $row = mysqli_fetch_assoc($result);
             $articles[] = $row;
         }
+        return $articles;
+    }
+    function articles_allH($link){
+        $query = "SELECT * FROM articles ORDER BY id ASC";
+        $result = mysqli_query($link, $query);
 
+        if (!$result)
+            die(mysqli_error($link));
+
+        $n = mysqli_num_rows($result);
+        $articles = array();
+
+        for ($i = $n; $i > 0; $i--){
+            $row = mysqli_fetch_assoc($result);
+            $articles[] = $row;
+        }
         return $articles;
     }
     function articles_new($link, $header, $mark, $plusminus, $image, $about, $map, $brn){
