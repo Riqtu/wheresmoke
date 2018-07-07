@@ -138,12 +138,26 @@ function recomendationOn(){
 }
 function closeRecom(){
     var z = document.getElementsByClassName("recomendation-all");
-    var header = document.getElementsByClassName("article-recom_header");
+    z[0].style.opacity = "0"; 
+    setTimeout(() => {
+        z[0].style.display = "none";
+    }, 1);
+}
+function openAbout(){
+    var z = document.getElementsByClassName("about");
     z[0].style.display = "block";
     setTimeout(() => {
         z[0].style.opacity = "1"; 
     }, 1);
+}
+
+function goToHome(){
+    var z = document.getElementsByClassName("recomendation-all");
+    var ab = document.getElementsByClassName("about");
+    z[0].style.opacity = "0"; 
+    ab[0].style.opacity = "0";
     setTimeout(() => {
-        header[0].style.zIndex = "300"; 
-    }, 600);
+        z[0].style.display = "none";
+        ab[0].style.display = "none";
+    }, 1);
 }

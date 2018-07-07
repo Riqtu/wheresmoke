@@ -62,6 +62,12 @@
                 <td><textarea name="brn" required><?=$article['brn']?></textarea></td>
             </label>
             </tr>
+            <tr>
+            <label>
+                <td>Местоположение</td>
+                <td><input type="text" name="locinrost" value="<?=$article['locinrost']?>" required></td>
+            </label>
+            </tr>
             </table>
             <input type="submit" value="Сохранить">
         </form>

@@ -173,7 +173,7 @@ body{
     transition: 0.2s;
 }
 .novigation h1:hover{
-    color:rgb(184, 62, 62);
+    color:rgb(18, 105, 69);
 }
 .novigation__exit{
     position: fixed;
@@ -203,9 +203,11 @@ body{
     position: fixed;
     left: 20px;
     top: 15px;
+    z-index: 20;
 }
 .logo img{
     width: 400px;
+    cursor: pointer;
 }
 .content{
     position: absolute;
@@ -223,7 +225,7 @@ body{
     margin-top: 20px;
     box-shadow: 1px 1px 3px black;
     transition: 1s;
-    z-index: 20;
+    z-index: 21;
 }
 .article__header{
     position: relative;
@@ -413,7 +415,7 @@ body{
     display: none;
     opacity: 0;
     transition: 0.5s;
-    z-index: 200;
+    z-index: 22;
 }
 .recomendation-all__header{
     position: absolute;
@@ -503,6 +505,63 @@ body{
     transition: 0.3s;
 }
 .contacts img:hover{
+    opacity: 1;
+}
+.about{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0b0b0b;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 100;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+}
+.about-cont{
+    width: 1000px;
+    margin-left: calc(50% - 500px)
+}
+.about-cont h1{
+    font-size: 30pt;
+    font-weight: 900;
+}
+.about-cont h2{
+    font-size: 20pt;
+    font-weight: 300;
+}
+.locate-buttons{
+    position: fixed;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-size: 16pt;
+    float: left;
+    left: auto;
+    right: 100px;
+    top: 28px;
+}
+.locate-buttons__but{
+    position: relative;
+    width: 90px;
+    height: 40px;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background: rgba(15, 15, 15, 0.829);
+    opacity: 0.6;
+    color: white;
+    font-size: 15pt;
+    float: right;
+    margin-left: 5px;
+    border: none;
+    top: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.locate-buttons__but:hover{
     opacity: 1;
 }
 /* AIzaSyDH5Ip6Sn7sYq5jriRtXy04UqZvQap81WA */

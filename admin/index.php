@@ -12,7 +12,7 @@
 
     if ($action == "add"){
         if(!empty($_POST)){
-            articles_new($link, $_POST['header'], $_POST['mark'], $_POST['plusminus'], $_POST['image'], $_POST['about'], $_POST['map'], $_POST['brn'] );
+            articles_new($link, $_POST['header'], $_POST['mark'], $_POST['plusminus'], $_POST['image'], $_POST['about'], $_POST['map'], $_POST['brn'], $_POST['locinrost'] );
             header("Location: index.php");
         }
         include("article_admin.php");
@@ -23,7 +23,7 @@
         $id = (int)$_GET['id'];
 
         if(!empty($_POST) && $id > 0){
-            articles_edit($link, $id, $_POST['header'], $_POST['mark'], $_POST['plusminus'], $_POST['image'], $_POST['about'], $_POST['map'], $_POST['brn']);
+            articles_edit($link, $id, $_POST['header'], $_POST['mark'], $_POST['plusminus'], $_POST['image'], $_POST['about'], $_POST['map'], $_POST['brn'], $_POST['locinrost']);
             header("Location: index.php");
         }
         $article = articles_get($link, $id);
