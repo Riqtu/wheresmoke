@@ -44,6 +44,7 @@ function openArticle(i) {
     var z = document.getElementsByClassName("article__about");
     var a = document.getElementsByClassName("article__buy");
     var m = document.getElementsByClassName("article__map");
+    var ex = document.getElementsByClassName("article__exit");
 
     x[i].style.width = '100vw';
     x[i].style.left = '0';
@@ -56,6 +57,8 @@ function openArticle(i) {
     
     z[i].style.display = "block";
     a[i].style.display = "grid";
+
+    ex[i].style.opacity = "1";
     setTimeout(() => {
        z[i].style.opacity = "1"; 
        a[i].style.opacity = "1";
@@ -90,10 +93,12 @@ function closeArticle(k) {
     var z = document.getElementsByClassName("article__about");
     var a = document.getElementsByClassName("article__buy");
     var m = document.getElementsByClassName("article__map");
+    var ex = document.getElementsByClassName("article__exit");
 
     z[k].style.opacity = "0"; 
     a[k].style.opacity = "0"; 
     m[k].style.opacity = "0"; 
+    ex[k].style.opacity = "0"; 
 
     setTimeout(() => {
         a[k].style.transition = "1s";
@@ -141,7 +146,7 @@ function closeRecom(){
     z[0].style.opacity = "0"; 
     setTimeout(() => {
         z[0].style.display = "none";
-    }, 1);
+    }, 300);
 }
 function openAbout(){
     var z = document.getElementsByClassName("about");

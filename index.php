@@ -13,10 +13,34 @@ $counter = -1;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Где кальян?</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&amp;subset=cyrillic" rel="stylesheet">
     <script src="js/jquery-latest.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(window).load(function() {
+                setTimeout(function() {
+                    $('.ldb').fadeOut('slow', function() {});
+                }, 100);
+            });
+        });
+    </script>
 </head>
 <body>
+    <div class="ldb">
+        <div class="banter-loader">
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+        </div>
+    </div>
+
     <div class="howold">
         <h1 class="howold__st">18+</h1>
         <h1 class="howold__noold">:c</h1>
@@ -54,13 +78,14 @@ $counter = -1;
     <?php foreach ($articles as $a): $counter +=1;?>
     <div class="article">
         <div class="article__header" onclick="openArticle(<?= $counter ?>)"><?=$a['header']?></div>
+        <div class="article__exit" onclick="closeArticle(<?= $counter ?>)">X</div>
         <div class="article__mark"><?php echo "<img src='".$a['mark']."' >"?></div>
         <br><br><br>
         <div class="article__plusminus" onclick="openArticle(<?= $counter ?>)"><?=$a['plusminus']?></div>
         <div class="article__img" onclick="openArticle(<?= $counter ?>)"><?php echo "<img src='".$a['image']."'>"?></div>
         <div class="article__about"><?=$a['about']?></div>
         <div class="article__map"><?=$a['map']?></div>
-        <div class="article__buy" onclick="closeArticle(<?= $counter ?>)">
+        <div class="article__buy">
             ЗАБРОНИРОВАТЬ
         </div>
     </div>
