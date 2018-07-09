@@ -14,6 +14,7 @@ $counter = -1;
     <title>Где кальян?</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/media.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900&amp;subset=cyrillic" rel="stylesheet">
     <script src="js/jquery-latest.js"></script>
     <script>
