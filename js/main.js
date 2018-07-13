@@ -48,9 +48,12 @@ function openArticle(i) {
 
     x[i].style.width = '100vw';
     x[i].style.left = '0';
+    if (($(document).width())>500){
     x[i].style.height = 'calc(100vh - 145px)';
-    
-
+    }
+    if (($(document).width())<=500){
+        x[i].style.height = '370px';
+    }
     y[i].style.right = "10px";
     y[i].style.top = "10px";
 
@@ -61,16 +64,18 @@ function openArticle(i) {
     ex[i].style.opacity = "1";
     setTimeout(() => {
        z[i].style.opacity = "1"; 
+       if (($(document).width())>500){
        a[i].style.opacity = "1";
+       }
     }, 100);
-
+    if (($(document).width())>500){
     setTimeout(() => {
         m[i].style.display = "block"; 
     }, 400);
     setTimeout(() => {
         m[i].style.opacity = "1";  
     }, 500);
-
+    }
 
     setTimeout(() => {
     a[i].style.transition = "0.4s";
@@ -82,10 +87,21 @@ function openArticle(i) {
 function closeArticle(k) {
     var x = document.getElementsByClassName("article");
     // k= x.length - k - 1;
+    if (($(document).width())>500){
     x[k].style.width = '700px';
     x[k].style.left = '20px';
     x[k].style.height = '270px';
-    
+    }
+    if (($(document).width())<=500){
+    x[k].style.width = '95%';
+    x[k].style.left = '2.5%';
+    x[k].style.height = '160px';
+    }
+    if (($(document).width())<=380){
+        x[k].style.width = '95%';
+        x[k].style.left = '2.5%';
+        x[k].style.height = '120px';
+        }
     var y = document.getElementsByClassName("article__img");
     y[k].style.right = "0px";
     y[k].style.top = "0px";

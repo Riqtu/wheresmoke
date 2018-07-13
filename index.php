@@ -67,7 +67,7 @@ $counter = -1;
         <!-- <h1 onclick="projectsOn(); menu.setMenu();">РАБОТЫ</h1>
         <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
     </div>
-    <div class="logo" id="all">
+    <div class="logo">
     <!-- <form name="f1" method="post" action="search.php">
 <input type="search" name="search_q"/>
 <input type="submit" value="Поиск"/></br>
@@ -84,7 +84,12 @@ $counter = -1;
         <br><br><br>
         <div class="article__plusminus" onclick="openArticle(<?= $counter ?>)"><?=$a['plusminus']?></div>
         <div class="article__img" onclick="openArticle(<?= $counter ?>)"><?php echo "<img src='".$a['image']."'>"?></div>
-        <div class="article__about"><?=$a['about']?></div>
+        <div class="article__about">
+            <h1>ОПИСАНИЕ</h1>
+            <?=$a['about']?>
+            <h1>КОНТАКТЫ</h1>
+            <?=$a['contacts']?>
+        </div>
         <div class="article__map"><?=$a['map']?></div>
         <div class="article__buy">
             ЗАБРОНИРОВАТЬ

@@ -66,19 +66,20 @@
         }
         return $articles;
     }
-    function articles_new($link, $header, $mark, $plusminus, $image, $about, $map, $brn, $locinrost){
+    function articles_new($link, $header, $mark, $plusminus, $image, $about, $contacts, $map, $brn, $locinrost){
         $header = trim($header);
 
         if ($header == '')
             return false;
         
-        $t = "INSERT INTO articles (header, mark, plusminus, image, about, map, brn, locinrost) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%s','%s')";
+        $t = "INSERT INTO articles (header, mark, plusminus, image, about, contacts, map, brn, locinrost) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%s','%s','%s')";
         $query = sprintf($t,
         mysqli_real_escape_string($link, $header), 
         mysqli_real_escape_string($link, $mark),
         mysqli_real_escape_string($link, $plusminus),
         mysqli_real_escape_string($link, $image),
         mysqli_real_escape_string($link, $about),
+        mysqli_real_escape_string($link, $contacts),
         mysqli_real_escape_string($link, $map),
         mysqli_real_escape_string($link, $brn),
         mysqli_real_escape_string($link, $locinrost));
@@ -100,12 +101,13 @@
         return $article;
     }
 
-    function articles_edit($link, $id, $header, $mark, $plusminus, $image, $about, $map, $brn, $locinrost){
+    function articles_edit($link, $id, $header, $mark, $plusminus, $image, $about, $contacts, $map, $brn, $locinrost){
         $header = trim($header);
         $mark = trim($mark);
         $plusminus = trim($plusminus);
         $image = trim($image);
         $about = trim($about);
+        $contacts = trim($contacts);
         $map = trim($map);
         $brn = trim($brn);
         $locinrost = trim($locinrost);
@@ -113,13 +115,14 @@
 
         if ($header == '') return false;
 
-        $sql = "UPDATE articles SET header='%s', mark='%s', plusminus='%s', image='%s', about='%s',map='%s',brn='%s', locinrost='%s' WHERE id='%d'";
+        $sql = "UPDATE articles SET header='%s', mark='%s', plusminus='%s', image='%s', about='%s', contacts='%s', map='%s',brn='%s', locinrost='%s' WHERE id='%d'";
         $query = sprintf($sql, 
         mysqli_real_escape_string($link, $header), 
         mysqli_real_escape_string($link, $mark),
         mysqli_real_escape_string($link, $plusminus),
         mysqli_real_escape_string($link, $image),
         mysqli_real_escape_string($link, $about),
+        mysqli_real_escape_string($link, $contacts),
         mysqli_real_escape_string($link, $map),
         mysqli_real_escape_string($link, $brn),
         mysqli_real_escape_string($link, $locinrost),

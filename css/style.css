@@ -7,6 +7,9 @@
 body{
     background: #0b0b0b;
 }
+tr{
+    margin: 10px;
+}
 .howold{
     position: fixed;
     width: 100%;
@@ -75,6 +78,7 @@ body{
     height: 40px;
     z-index: 120;
     top: 20px;
+    left: auto;
     right: 30px;
     display: grid;
     justify-content: end;
@@ -98,7 +102,7 @@ body{
     width: 33%;
     height: 100%;
     top:-100%;
-    background: rgb(0, 0, 0);
+    background: #0b0b0b;
     z-index: 101;
     transition: top 1s ease;
     /* visibility: hidden; */
@@ -115,7 +119,7 @@ body{
     left: 33%;
     height: 100%;
     top: 100%;
-    background: rgb(0, 0, 0);
+    background: #0b0b0b;
     z-index: 101;
     transition: top 1s ease;
     /* visibility: hidden; */
@@ -132,7 +136,7 @@ body{
     left: 66%;
     height: 100%;
     top: -100%;
-    background: rgb(0, 0, 0);
+    background: #0b0b0b;
     z-index: 101;
     overflow: hidden;
     /* visibility: hidden; */
@@ -323,14 +327,30 @@ body{
     transition: 0.3s;
     left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .admin-content{
-    position: absolute;
+    padding-top:10px;
+    padding-bottom: 15px;
+    position: relative;
     width: 100%;
-    height: calc(100% - 160px);
     /* left: 20px; */
     top: 160px;
     background: white;
     font-size: 15pt;
+    z-index: 100;
 }
 .add-article{
     position: absolute;
@@ -362,8 +382,23 @@ body{
 }
 .big-form{
     width: 350px;
-    height: 200px;
+    height: 160px;
 }
+.td-form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .recomendation{
     position: fixed;
@@ -379,7 +414,7 @@ body{
 .recomendation__header{
     position: absolute;
     margin-left: 30px;
-    margin-top: calc(50% - 85px);
+    margin-top: calc(50% - 30px);
     color: white;
     font-weight: 900;
     font-size: 20pt;
@@ -389,7 +424,7 @@ body{
     opacity: 0.8;
     width: 600px;
     margin-left: 30px;
-    margin-top: calc(50% - 50px);
+    margin-top: calc(50% + 5px);
     transition: 0.3s;
     z-index: 1;
     height: 270px;
@@ -518,31 +553,6 @@ body{
 .contacts img:hover{
     opacity: 1;
 }
-.about{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #0b0b0b;
-    display: none;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 100;
-    text-align: center;
-    padding-top: 50px;
-    color: white;
-}
-.about-cont{
-    width: 1000px;
-    margin-left: calc(50% - 500px)
-}
-.about-cont h1{
-    font-size: 30pt;
-    font-weight: 900;
-}
-.about-cont h2{
-    font-size: 20pt;
-    font-weight: 300;
-}
 .locate-buttons{
     position: fixed;
     width: 300px;
@@ -576,3 +586,64 @@ body{
     opacity: 1;
 }
 /* AIzaSyDH5Ip6Sn7sYq5jriRtXy04UqZvQap81WA */
+
+
+
+.about{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 100;
+    padding-top: 50px;
+    color: white;
+}
+.about__back{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('../img/back.jpg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+
+}
+.about__logo{
+    position: absolute;
+    color: white;
+    font-size: 58pt;
+    font-weight: 900;
+    margin: 20px;
+}
+.about__cont{
+    position: absolute;
+    display: grid;
+    align-content: center;
+    width: 770px;
+    height: 400px;
+    background: #ffffffde;
+    color: #000000;
+    text-align: center;
+    z-index: 101;
+    top: calc(50% - 200px);
+}
+.about__cont h1{
+    font-size: 30pt;
+    font-weight: 900;
+}
+.about__cont h2{
+    font-size: 20pt;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+

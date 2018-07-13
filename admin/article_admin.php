@@ -51,6 +51,12 @@
             </tr>
             <tr>
             <label>
+                <td>Контакты</td>
+                <td><textarea name="contacts" class="big-form" required><?=$article['contacts']?></textarea></td>
+            </label>
+            </tr>
+            <tr>
+            <label>
                 <td>Карта</td>
                 <td><textarea name="map" required><?=$article['map']?></textarea></td>
                  
@@ -64,7 +70,7 @@
             </tr>
             <tr>
             <label>
-                <td>Местоположение</td>
+                <td>Местоположение...</td>
                 <td><input type="text" name="locinrost" value="<?=$article['locinrost']?>" required></td>
             </label>
             </tr>

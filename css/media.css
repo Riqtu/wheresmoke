@@ -1,4 +1,4 @@
-@media only screen and (max-width : 1920px){
+@media only screen and (max-width : 1920px) and (min-width : 1690px){
     .recomendation{
         right: 0px;
     }
@@ -20,8 +20,177 @@
 @media only screen and (max-width : 940px){
 }
 @media only screen and (max-width : 736px){
+    .content{
+        width: 100%;
+    }
+    .howold h1{
+        font-size: 100pt;
+    }
+    .howold h2{
+        font-size: 25pt;
+        margin-top: -30px;
+    }
+    .howold__logo{
+        position: fixed;
+        left: 20px;
+        top: 15px;
+        opacity: 0.2;
+    }
+    .howold__logo img{
+        width: 200px;
+    }
+    .howold__yes, .howold__no{
+        top: calc(50% + 70px);
+        width: 130px;
+    }
+    .howold__yes{
+        right: calc(50% - 150px);
+    }
+    .howold__no{
+        left: calc(50% - 150px);
+    }
+    .menu{
+        width: 35px;
+        height: 35px;
+        right: 10px;
+        top: 10px;
+    } 
+    .menu__img{
+        width: 35px;
+    }
+    .novigation h1{
+        font-size:37pt;
+    }
+    .logo img{
+        width: 200px;
+    }
+    .content{
+        top: 90px;
+    }
+    .article{
+        left: 2.5%;
+        width: 95%;
+        height: 160px;
+    }
+    .article__header{
+        font-size: 15pt;
+        margin-left: 5px;
+        margin-top:2px;
+    }
+    .article__mark{
+        margin-top: -10px;
+        left: 5px;
+    }
+    .article__mark img{
+        width: 100px;
+    }
+    .article__plusminus{
+        font-size: 8.2pt;
+        margin-top: -42px;
+        margin-left: 5px;
+    }
+    .article__img img{
+        width: 170px;
+    }
+    .article__about{
+        width: 45%;
+        margin-left: 5px;
+        font-size: 8.2pt;
+    }
+    .article__about h1{
+        font-size: 15pt;
+    }
+    .article__exit{
+        font-size: 20pt;
+    }
+    .locate-buttons{
+        width: 300px;
+        height: 35px;
+        color: white;
+        font-size: 8pt;
+        right: 50px;
+        top: 13.5px;
+        z-index: 130;
+    }
+    .locate-buttons__but{
+        position: relative;
+        width: 45px;
+        height: 28px;
+        font-size: 8pt;
+        margin-left: 5px;
+    }
+    .about__logo{
+        font-size: 20pt;
+    }
+    .about__cont{
+        position: absolute;
+        display: grid;
+        align-content: center;
+        width: 85%;
+       height: 200px;
+       top: calc(50% - 100px);
+    }
+    .about__cont h1{
+        font-size: 12pt;
+        font-weight: 900;
+    }
+    .about__cont h2{
+        font-size: 8pt;
+        font-weight: 300;
+    }
 }
 @media only screen and (max-width : 380px){
+    .article{
+        left: 2.5%;
+        width: 95%;
+        height: 120px;
+    }
+    .article__header{
+        font-size: 13pt;
+        margin-left: 5px;
+        margin-top:2px;
+    }
+    .article__mark{
+        margin-top: -10px;
+        left: 5px;
+    }
+    .article__mark img{
+        width: 100px;
+    }
+    .article__plusminus{
+        font-size: 6pt;
+        margin-top: -42px;
+        margin-left: 5px;
+    }
+    .article__img img{
+        width: 130px;
+    }
+    .article__about{
+        width: 45%;
+        margin-left: 5px;
+        font-size: 6pt;
+    }
+    .article__about h1{
+        font-size: 15pt;
+    }
+    .article__exit{
+        font-size: 20pt;
+    }
+    .contacts{
+        left: calc(100% - 200px);
+        top: calc(100% - 25px);
+
+    }
+    .contacts h3{
+        font-size: 8pt;
+    }
+    .contacts img{
+        margin-top: -3px;
+        margin-left: 7px;
+        width: 20px;
+        opacity: 0.7;
+        transition: 0.3s;
+    }
 }
 @media only screen and (max-width : 320px){
 }
