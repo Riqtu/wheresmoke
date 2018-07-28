@@ -97,7 +97,7 @@ function closeArticle(k) {
     x[k].style.left = '2.5%';
     x[k].style.height = '160px';
     }
-    if (($(document).width())<=380){
+    if (($(document).width())<=320){
         x[k].style.width = '95%';
         x[k].style.left = '2.5%';
         x[k].style.height = '120px';

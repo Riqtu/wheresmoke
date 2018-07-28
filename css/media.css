@@ -20,6 +20,13 @@
 @media only screen and (max-width : 940px){
 }
 @media only screen and (max-width : 736px){
+    .article{
+        left: 2.5%;
+        width: 95%;
+        /* height: 160px; */
+    }
+}
+@media only screen and (max-width : 500px){
     .content{
         width: 100%;
     }
@@ -139,7 +146,7 @@
         font-weight: 300;
     }
 }
-@media only screen and (max-width : 380px){
+@media only screen and (max-width : 320px){
     .article{
         left: 2.5%;
         width: 95%;
