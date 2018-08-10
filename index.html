@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,11 +60,27 @@
         <!-- <h1 onclick="projectsOn(); menu.setMenu();">РАБОТЫ</h1>
         <h1 onclick="contactsOn(); menu.setMenu();">КОНТАКТЫ</h1> -->
     </div>
+    <div class="search">
+        <form method="post" action="in-search.php">
+            <input type="submit" value=" " class="search_button" />
+            <input type="text" name="search" id="search_box" class='search_box' placeholder="Введите кальянную..."/>
+        </form>
+    </div>
+    <div class="locate-buttons">
+        <form name="2" id="SJM"> 
+            <input type=hidden name="qwe" > 
+            <input type="submit" value="СЖМ" class="locate-buttons__but">
+        </form>
+        <form name="2" id="ZJM"> 
+            <input type=hidden name="qwe"> 
+            <input type="submit" value="ЗЖМ" class="locate-buttons__but">
+        </form>
+        <form name="2" id="CNTR"> 
+            <input type=hidden name="qwe"> 
+            <input type="submit" value="ЦЕНТР" class="locate-buttons__but">
+        </form>
+    </div>
     <div class="logo">
-    <!-- <form name="f1" method="post" action="search.php">
-<input type="search" name="search_q"/>
-<input type="submit" value="Поиск"/></br>
-</form> -->
         <img src="img/logo.png" id="all" >
     </div>
 
@@ -85,20 +101,7 @@
         <a href=""><img src="img/vk.svg" alt=""></a>
         <a href="admin/index.php"><img src="img/instagram.svg" alt=""></a>
     </div>
-    <div class="locate-buttons">
-        <form name="2" id="SJM"> 
-            <input type=hidden name="qwe" > 
-            <input type="submit" value="СЖМ" class="locate-buttons__but">
-        </form>
-        <form name="2" id="ZJM"> 
-            <input type=hidden name="qwe"> 
-            <input type="submit" value="ЗЖМ" class="locate-buttons__but">
-        </form>
-        <form name="2" id="CNTR"> 
-            <input type=hidden name="qwe"> 
-            <input type="submit" value="ЦЕНТР" class="locate-buttons__but">
-        </form>
-    </div>
+
     <div class="about">
 
     </div>
@@ -113,7 +116,7 @@
                 return false;
             });  
         $(document).ready(function(){  
-            $('#all').submit(function(){  
+            $('#all').click(function(){  
                 $.ajax({  
                     url: "locate/all.php",  
                     success: function(html){  
@@ -181,8 +184,27 @@
                     }  
                 });  
             });  
-              
-        });  
+            $(".search_button").click(function() {
+                // получаем то, что написал пользователь
+                var searchString    = $("#search_box").val();
+                // формируем строку запроса
+                var data            = 'search=' + searchString;
+
+                // если searchString не пустая
+                if(searchString) {
+                    // делаем ajax запрос
+                    $.ajax({
+                        type: "POST",
+                        url: "models/in-search.php",
+                        data: data,
+                    success: function(html){  
+                                $(".content").html(html);  
+                            }  
+                    });
+                }
+                return false;
+            });
+    });   
     </script>
     <script src="js/main.js"></script>
 </body>

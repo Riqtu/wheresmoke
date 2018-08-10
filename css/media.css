@@ -78,9 +78,10 @@
         left: 2.5%;
         width: 95%;
         height: 160px;
+        top: 15px
     }
     .article__header{
-        font-size: 15pt;
+        font-size: 13pt;
         margin-left: 5px;
         margin-top:2px;
     }
@@ -105,24 +106,25 @@
         font-size: 8.2pt;
     }
     .article__about h1{
-        font-size: 15pt;
+        font-size: 12pt;
     }
     .article__exit{
-        font-size: 20pt;
+        font-size: 19pt;
     }
     .locate-buttons{
+        position: fixed;
         width: 300px;
-        height: 35px;
+        height: 30px;
         color: white;
         font-size: 8pt;
-        right: 50px;
-        top: 13.5px;
-        z-index: 130;
+        right: auto;
+        top: 85px;
+        left: -135px;
     }
     .locate-buttons__but{
         position: relative;
         width: 45px;
-        height: 28px;
+        height: 21px;
         font-size: 8pt;
         margin-left: 5px;
     }
@@ -144,6 +146,39 @@
     .about__cont h2{
         font-size: 8pt;
         font-weight: 300;
+    }
+    .search{
+        position: fixed;
+        left: auto;
+        right: 150px;
+        top: 28px;
+        z-index: 100;
+        opacity: 0.7;
+        transition: 0.2s;
+        background: rgb(59, 59, 59);
+    }
+    .search_box{
+        position: fixed;
+        width: 100px;
+        height: 25px;
+        left: 205px;
+        top: 15px;
+        background: rgb(75, 75, 75);
+        transition: 0.3s;
+        border: none;
+    }
+    .search_box:hover{
+        background: rgb(184, 184, 184);
+    }
+    .search_button{
+        position: fixed;
+        width:  25px;
+        height: 25px;
+        left: 180px;
+        top: 15px;
+        background-image: url("../img/search.jpg");
+        background-size: contain;
+        border: none;
     }
 }
 @media only screen and (max-width : 320px){

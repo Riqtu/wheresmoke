@@ -51,7 +51,7 @@
         return $articles;
     }
     function articles_all_CNTR($link){
-        $query = "SELECT * FROM articles WHERE locinrost='центр' ORDER BY id ASC";
+        $query = "SELECT * FROM articles WHERE locinrost LIKE 'центр' ORDER BY id ASC";
         $result = mysqli_query($link, $query);
 
         if (!$result)
@@ -60,6 +60,24 @@
         $n = mysqli_num_rows($result);
         $articles = array();
 
+        for ($i = $n; $i > 0; $i--){
+            $row = mysqli_fetch_assoc($result);
+            $articles[] = $row;
+        }
+        return $articles;
+    }
+    function articles_all_search($link){
+        $query = "SELECT * FROM articles WHERE header LIKE '%" . $word . "%' ORDER BY id ASC";
+        $result = mysqli_query($link, $query);
+    
+        if (!$result){
+            die(mysqli_error($link));
+            echo "PIIIISOOOOS";
+        }
+    
+        $n = mysqli_num_rows($result);
+        $articles = array();
+    
         for ($i = $n; $i > 0; $i--){
             $row = mysqli_fetch_assoc($result);
             $articles[] = $row;

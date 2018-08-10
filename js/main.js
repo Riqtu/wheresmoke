@@ -49,7 +49,7 @@ function openArticle(i) {
     x[i].style.width = '100vw';
     x[i].style.left = '0';
     if (($(document).width())>500){
-    x[i].style.height = 'calc(100vh - 145px)';
+    x[i].style.height = '750px';
     }
     if (($(document).width())<=500){
         x[i].style.height = '370px';
