@@ -4,6 +4,11 @@
     font-family: 'Montserrat', sans-serif;
     
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(255, 255, 255, 0.0);
+  }
+
 body{
     background: #0b0b0b;
 }
@@ -240,6 +245,7 @@ tr{
     font-weight: 900;
     cursor: pointer;
     float: left;
+    z-index: 10;
 }
 .article__mark{
     position: relative;
@@ -327,6 +333,7 @@ tr{
     opacity: 0;
     transition: 0.3s;
     left: 10px;
+    z-index: 9;
 }
 
 
@@ -419,7 +426,7 @@ tr{
     color: white;
     font-weight: 900;
     font-size: 20pt;
-    cursor: pointer;
+
 }
 .article-recom{
     opacity: 0.8;
@@ -431,6 +438,7 @@ tr{
     height: 270px;
     background-color: #0b0b0b;
     box-shadow: 1px 1px 3px black;
+    cursor: pointer;
 }
 .article-recom__img{
     position: absolute;
@@ -565,6 +573,7 @@ tr{
     right: 100px;
     top: 78px;
     z-index: 99;
+    border-radius: 0;
 }
 .locate-buttons__but{
     position: relative;
@@ -583,6 +592,8 @@ tr{
     top: 0;
     transition: 0.3s;
     cursor: pointer;
+    border-radius: 0px;
+    border-radius: 0;
 }
 .locate-buttons__but:hover{
     opacity: 1;
@@ -660,16 +671,26 @@ tr{
     height: 40px;
     background: rgb(75, 75, 75);
     transition: 0.3s;
+    border: none;
+    left: auto;
+    right: 100px;
+    top: 29px;
+    border-radius: 0;
 }
 .search_box:hover{
     background: rgb(184, 184, 184);
 }
 .search_button{
+    position: fixed;
     width:  40px;
     height: 40px;
     background-image: url("../img/search.jpg");
     background-size: contain;
     border: none;
+    left: auto;
+    right: 340px;
+    top: 29px;
+    border-radius: 0;
 }
 
 

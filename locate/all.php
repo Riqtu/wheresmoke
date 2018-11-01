@@ -7,7 +7,7 @@ $counter = -1;
 ?>
 <?php foreach ($articles as $a): $counter +=1;?>
     <div class="article">
-        <div class="article__header" onclick="openArticle(<?= $counter ?>)"><?=$a['header']?></div>
+        <div class="article__header" onclick="openArticle(<?= $counter ?>)"><?=$a['header']?></div> 
         <div class="article__exit" onclick="closeArticle(<?= $counter ?>)">X</div>
         <div class="article__mark"><?php echo "<img src='".$a['mark']."' >"?></div>
         <br><br><br>

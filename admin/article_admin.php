@@ -12,7 +12,7 @@
     <div>
     <div class="bg"></div>
     <div class="logo">
-    <a href="../index.php"><img src="../img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)"></a>
+    <a href="../admin/"><img src="../img/logo.png" alt="" onclick="closeArticle(<?= $counter ?>)"></a>
     </div>
     <div>
     <div class="admin-content">
@@ -31,47 +31,47 @@
             </label>
             </tr>
             <tr>
-                <label>
+                <label id=ta>
                     <td>Плюсы и Минусы</td>
-                    <td><textarea name="plusminus" class="big-form" required><?=$article['plusminus']?></textarea></td>
+                    <td id=d><textarea name="plusminus" class="big-form"><?=$article['plusminus']?></textarea></td>
                 </label>
             </tr>
             <tr>
             <label>
                 <td>Изображение</td>
-                <td><textarea name="image" required><?=$article['image']?></textarea></td>
+                <td><textarea name="image" ><?=$article['image']?></textarea></td>
                 
             </label>
             </tr>
             <tr>
             <label>
                 <td>Описание</td>
-                <td><textarea name="about" class="big-form" required><?=$article['about']?></textarea></td>
+                <td><textarea name="about" class="big-form" ><?=$article['about']?></textarea></td>
             </label>
             </tr>
             <tr>
             <label>
                 <td>Контакты</td>
-                <td><textarea name="contacts" class="big-form" required><?=$article['contacts']?></textarea></td>
+                <td><textarea name="contacts" class="big-form" ><?=$article['contacts']?></textarea></td>
             </label>
             </tr>
             <tr>
             <label>
                 <td>Карта</td>
-                <td><textarea name="map" required><?=$article['map']?></textarea></td>
+                <td><textarea name="map" ><?=$article['map']?></textarea></td>
                  
             </label>
             </tr>
             <tr>
             <label>
                 <td>Бронь/*</td>
-                <td><textarea name="brn" required><?=$article['brn']?></textarea></td>
+                <td><textarea name="brn" ><?=$article['brn']?></textarea></td>
             </label>
             </tr>
             <tr>
             <label>
                 <td>Местоположение...</td>
-                <td><input type="text" name="locinrost" value="<?=$article['locinrost']?>" required></td>
+                <td><input type="text" name="locinrost" value="<?=$article['locinrost']?>" ></td>
             </label>
             </tr>
             </table>

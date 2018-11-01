@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <!-- <meta http-equiv="expires" content="0" -->
     <title>Где кальян?</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loader.css">
@@ -179,10 +181,11 @@
                 $.ajax({  
                     url: "about.html",  
                     cache: false,  
-                    success: function(html){  
-                        $(".about").html(html);  
+                    success: function(html){              
+                        $(".about").html(html);
+                        window.history.pushState(none, none, "/about"); 
                     }  
-                });  
+                }); 
             });  
             $(".search_button").click(function() {
                 // получаем то, что написал пользователь
@@ -190,9 +193,9 @@
                 // формируем строку запроса
                 var data            = 'search=' + searchString;
 
-                // если searchString не пустая
+            
                 if(searchString) {
-                    // делаем ajax запрос
+                    
                     $.ajax({
                         type: "POST",
                         url: "models/in-search.php",

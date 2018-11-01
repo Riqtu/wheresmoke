@@ -59,13 +59,13 @@ function openArticle(i) {
 
     
     z[i].style.display = "block";
-    a[i].style.display = "grid";
+    // a[i].style.display = "grid";
 
-    ex[i].style.opacity = "1";
+    ex[i].style.opacity = "1"; 
     setTimeout(() => {
-       z[i].style.opacity = "1"; 
+       z[i].style.opacity = "1";
        if (($(document).width())>500){
-       a[i].style.opacity = "1";
+    //    a[i].style.opacity = "1";
        }
     }, 100);
     if (($(document).width())>500){
